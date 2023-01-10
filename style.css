@@ -1,0 +1,141 @@
+/* CSS HEX 
+
+--dark-jungle-green: #041b15ff;
+--pine-green: #136f63ff;
+--light-sea-green: 
+--turquoise: #4ce0d2ff;
+--sky-blue: #84cae7ff;  
+
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Cinzel Decorative', cursive;*/
+
+
+:root{
+    --clr-light: #84cae7ff;
+    --clr-main: #4ce0d2ff;
+    --clr-dark: #22aaa1ff;
+    --clr-darker:  #136f63ff;
+    --clr-darkest: #041b15ff;
+
+    --fnt-title: 'Cinzel Decorative', cursive;
+    --fnt-text: 'Alegreya Sans', sans-serif;
+}
+
+
+*{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;font-family: var(--fnt-text);
+    color: var(--clr-main);
+}
+
+html{
+    font-size: 62.5%;
+    /* background-color: #ffff; */
+}
+
+h1{
+    font-family: var(--fnt-title);
+    font-weight: 400;
+    color: var(--clr-darker);
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+h2{
+    font-family: var(--fnt-title);
+    font-weight: 250;
+    color: var(--clr-light);
+    background-color: var(--clr-darkest);
+    font-style: bold;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+
+
+/* classes */
+
+.container{
+    width: 100%;
+    height: 150vh;
+    background-color: #555;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    background-color: #ffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+
+
+.progress-bar-circle{
+    width: 39.4rem;
+    height: 39.4rem;
+    background-color: #000;
+    border-radius: 50%;
+    color: #ffff;
+    font-size: 4rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+    z-index: 10;
+}
+
+
+.half-circle, .half-circle-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform-origin: right center;
+}
+
+.half-circle:nth-child(1){
+    background-color: #b60000;
+}
+
+
+.half-circle:nth-child(2){
+    background-color: #b60000
+}
+
+.half-circle-top{
+    background-color: #ffff;
+}
+
+.progress-bar:scroll .half-circle-top{
+    opacity: 0;
+    transition: opacity 0s 1s;
+}
+
+.progress-bar:scroll .half-circle:nth-child(1){
+    transform: rotate(180deg);
+    transition: transform 1s linear;
+}
+
+.progress-bar:scroll .half-circle:nth-child(2){
+    transform: rotate(360deg);
+    transition: transform 2s linear;
+}
+
+
